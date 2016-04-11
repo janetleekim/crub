@@ -18,11 +18,11 @@
 			console.log('This is the returned time', json.run_time);
 			globalDatetime = json.run_time;
 
-			console.log('glboal', globalDatetime);
+			console.log('global', globalDatetime);
 			$('#latest-run-when').append(' ' + json.run_time);
 		},
 		error: function(json) {
-			alert("Sorry, there was a problem with the time!");
+			$('#latest-run-when').append(' No run found!');
 		},
 
 	});
@@ -42,7 +42,7 @@
 			$('#latest-run-where').append(' ' + json.location.label);
 		},
 		error: function(json) {
-			alert("Sorry, there was a problem with the location!");
+			$('#latest-run-where').append(' No location found!');
 		},
 
 	});
