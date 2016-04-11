@@ -1,4 +1,4 @@
-# crub
+# CRUB
 I'm a budding developer, with the warm support of the Fuzz Productions Web Team. This is the first web project that I have built from scratch (albeit with the assistance of most of the members of the aforementioned web team).
 
 4/11/16
