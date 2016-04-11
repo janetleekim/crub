@@ -1,0 +1,310 @@
+/**********************************
+GENERAL
+***********************************/
+
+body {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+}
+
+#wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3em;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/**********************************
+HEADER
+***********************************/
+
+/* brown header */
+header {
+  position: relative;
+  background: #391E16;
+  z-index: 99999;
+}
+
+#logo {
+  padding: 20px 0 10px 0;
+}
+
+
+/**********************************
+NAVIGATION
+***********************************/
+
+nav {
+  text-align: center;
+  padding: 10px 50px 0px 50px;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 10px;
+  padding: 10px 0 10px;
+}
+
+nav li {
+  display: inline-block;
+}
+nav a {
+  font-size: 32px;
+  font-weight: 400;
+  padding: 0px 10px;
+  color: #FDF2E7;
+}
+
+/* selected nav link */
+nav a.selected {
+  border-bottom: 5px solid transparent;
+  padding-bottom: 7px;
+  border-color: #E83805;
+}
+nav a, a:visited {
+  color: #FDF2E7;
+}
+
+nav a:hover {
+  color: #E83805;
+}
+
+
+
+
+/**********************************
+FOOTER
+***********************************/
+
+footer {
+  font-size: 0.75em;
+  text-align: center;
+  clear: both;
+  padding-top: 50px;
+}
+
+
+/**********************************
+PAGE: HOME
+***********************************/
+
+#run {
+  padding: 20px 0 0 0;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 36px;
+}
+
+h3 span {
+  font-weight: 700;
+  font-size: 32px;
+
+}
+
+
+/**********************************
+PAGE: ABOUT
+***********************************/
+
+#about-text {
+  float: left;
+  width: 45%;
+  margin: 2.5%;
+}
+#hair {
+  padding-top:20px;
+  float: left;
+  width: 45%;
+  margin: 2.5%;
+}
+
+
+/**********************************
+PAGE: LOCATIONS
+***********************************/
+
+#locationList {
+  margin: auto;
+}
+
+
+/**********************************
+PAGE: CONTACT
+***********************************/
+
+#contactform {
+  width: 50%;
+  margin: auto;
+}
+
+input, textarea {
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+  padding: 10px;
+  border: 1px solid #391E16;
+}
+
+textarea {
+  height: 200px;
+  max-width: 50%px;
+}
+
+.submit input {
+  display: inline-block;
+  height: 40px;
+  width: 45%;
+  padding-bottom: 35px;
+  background-color: #391E16;
+  color: #FFF;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+#clear_btn {
+  margin-left: 5%;
+}
+
+/**********************************
+COLORS
+***********************************/
+
+/* site body */
+body {
+  background-color: #fff;
+  color: #391E16;
+}
+
+
+
+/* nav background on mobile */
+nav {
+  background: #391E16;
+  font-size: 2em;
+}
+
+/* headline text */
+h1, h2 {
+  color: #391E16;
+}
+
+
+
+@media screen and (max-width: 746px) {
+
+
+/**********************************
+HEADER
+***********************************/
+#logo {
+  padding: 20px 0 5px 0;
+}
+
+/**********************************
+NAVIGATION
+***********************************/
+  nav {
+    text-align: center;
+    padding: 0px 50px 10px 50px;
+    margin: 0;
+  }
+
+  nav li {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  nav a.selected {
+    border-bottom: 5px solid transparent;
+    padding-bottom: 0px;
+    border-color: #E83805;
+  }
+
+/**********************************
+PAGE: ABOUT
+***********************************/
+
+#about-text {
+  width: 100%;
+}
+
+#hair {
+  width: 100%;
+}
+
+/**********************************
+PAGE: CONTACT
+***********************************/
+
+#contactform {
+  width: 75%;
+  margin: auto;
+}
+.submit input {
+  width: 40%;
+
+}
+
+@media screen and (max-width: 320px) {
+/**********************************
+GENERAL
+***********************************/
+h1 {
+  font-weight: 700;
+  font-size: 2em;
+}
+h2 {
+  font-weight: 700;
+  font-size: 1em;
+}
+h3 {
+  font-weight: 400;
+  font-size: 1em;
+}
+
+/**********************************
+HEADER
+***********************************/
+#logo {
+    padding: 20px 0 0 0;
+  }
+/**********************************
+NAVIGATION
+***********************************/
+nav a {
+    font-size: 18px;
+    font-weight: 300;
+    padding: 10px 0 0 0;
+    color: #FDF2E7;
+  }
+
+}

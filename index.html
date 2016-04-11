@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CRUB | Home</title>
+	<link rel="stylesheet" href=".css/normalize.css">
+	<link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript">
+
+	$.ajax({
+		url: "http://api.crubclub.com/1.0/runs/latest",
+		type: "GET",
+		dataType: "json",
+		success: function(json) {
+			console.log('This is the returned time', json.run_time);
+			globalDatetime = json.run_time;
+
+			console.log('glboal', globalDatetime);
+			$('#latest-run-when').append(' ' + json.run_time);
+		},
+		error: function(json) {
+			alert("Sorry, there was a problem with the time!");
+		},
+
+	});
+
+	var globalLocation = '';
+	$.ajax( {
+		url: "http://api.crubclub.com/1.0/runs/latest",
+		type: "GET",
+		dataType: "json",
+		success: function(json) {
+			console.log('This is the returned location', json.location);
+			globalLocation = json.location;
+
+			console.log(json);
+
+			console.log('global', json.location.label);
+			$('#latest-run-where').append(' ' + json.location.label);
+		},
+		error: function(json) {
+			alert("Sorry, there was a problem with the location!");
+		},
+
+	});
+
+	</script>
+
+</head>
+<body>
+	<header>
+		<nav>
+			<div id="logo"><a href ="index.html"><img src="images/logo.svg"></a></div>
+			<ul>
+				<li><a href="#" class="selected">TODAY'S RUN</a></li>
+				<li><a href="./locations/index.html">LOCATIONS</a></li>
+				<li><a href="./about/index.html">ABOUT</a></li>
+				<li><a href="./contact/index.html">CONTACT</a></li>
+
+			</ul>
+		</nav>
+	</header>
+	<div id="wrapper">
+
+		<section>
+			<div id="run">
+				<h1>TODAY'S RUN</h1>
+					<h3>WHEN:<span id="latest-run-when"></span></h3>
+					<h3>WHERE:<span id="latest-run-where"></span></h3>
+					</tr>
+				</table>
+			</div>
+		</section>
+		<footer>
+			<p>&copy; 2016 Coffee Runners United Brigade.</p>
+		</footer>
+	</div>
+</body>
+</html>
